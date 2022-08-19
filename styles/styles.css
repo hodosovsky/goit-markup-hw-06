@@ -143,7 +143,7 @@ img {
 .current::after {
   position: absolute;
   content: '';
-  bottom: 0;
+  bottom: -1px;
   left: 0;
   width: 100%;
   height: 4px;
@@ -228,7 +228,8 @@ img {
   /* outline: 2px solid orange; */
 }
 
-.hero .button {
+.hero .button,
+.form-button {
   min-width: 216px;
   padding: 10px 32px;
   cursor: pointer;
@@ -244,9 +245,10 @@ img {
   background-color: var(--button-bcg);
   transition: background-color 250ms var(--default-transition);
 }
-
-.hero .button:hover,
-.hero .button:focus {
+.form-button:hover,
+.form-button:focus,
+.button:hover,
+.button:focus {
   background-color: var(--button-hover);
 }
 
@@ -281,8 +283,10 @@ img {
   position: absolute;
   top: 50%;
   left: 50%;
-  min-width: 528px;
-  min-height: 581px;
+  max-width: 528px;
+  width: 100%;
+  max-height: 581px;
+  height: 100%;
   border-radius: 4px;
 
   background-color: var(--main-bcg-color);
@@ -296,6 +300,7 @@ img {
 
 .close-modal {
   position: absolute;
+  cursor: pointer;
   top: 8px;
   right: 8px;
   width: 30px;
@@ -304,6 +309,7 @@ img {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  background-color: var(--main-bcg-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
 }
