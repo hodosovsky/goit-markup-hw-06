@@ -602,6 +602,8 @@ img {
   text-align: center;
   color: var(--title-color);
   background-color: var(--team-bcg);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 
   transition: color 250ms var(--default-transition),
     background-color 250ms var(--default-transition);
@@ -611,8 +613,6 @@ img {
   margin-left: 8px;
 }
 .btn-flex .item {
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .filter:hover,
@@ -624,7 +624,7 @@ img {
 .btn-flex {
   display: flex;
   justify-content: center;
-  margin-bottom: 34px;
+  margin-bottom: 50px;
 }
 .portfolio {
   display: flex;
