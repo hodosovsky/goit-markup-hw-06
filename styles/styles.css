@@ -742,9 +742,6 @@ img {
 
 /* Форма підписки */
 .subscribe {
-  display: flex;
-
-  align-items: center;
   flex-grow: 2;
 }
 
