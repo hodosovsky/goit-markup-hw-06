@@ -228,7 +228,28 @@ img {
   /* outline: 2px solid orange; */
 }
 
-.hero .button,
+.button {
+  display: flex;
+  display: inline-block;
+  align-items: center;
+  width: 216px;
+  height: 50px;
+  margin: 0 auto;
+  padding: 0;
+  border-radius: 4px;
+  border: 0px;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: calc(30 / 16);
+  letter-spacing: 0.06em;
+  background: var(--button-bcg);
+  color: var(--button-text-color);
+  transition: background-color 250ms var(--default-transition);
+}
+
+/* .hero .button,
 .form-button {
   min-width: 216px;
   padding: 10px 32px;
@@ -243,11 +264,9 @@ img {
   letter-spacing: 0.06em;
   color: var(--button-text-color);
   background-color: var(--button-bcg);
-  transition: background-color 250ms var(--default-transition);
-}
+  transition: transform 250ms var(--default-transition);
+} */
 
-.form-button:hover,
-.form-button:focus,
 .button:hover,
 .button:focus {
   background-color: var(--button-hover);
@@ -306,11 +325,12 @@ img {
   background-color: var(--main-bcg-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
-  transition: transform 2500ms var(--default-transition);
+  transition: fill 250ms var(--default-transition), border-color 250ms var(--default-transition);
 }
 
 .close-modal:hover,
 .close-modal:focus {
+  border-color: var(--hover-color);
   fill: var(--hover-color);
 }
 
@@ -340,7 +360,6 @@ img {
   font-size: 12px;
   line-height: calc(14 / 12);
   letter-spacing: 0.01em;
-  transition: transform 2500ms var(--default-transition);
 }
 
 .form-field {
@@ -362,7 +381,7 @@ img {
   margin-bottom: 10px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  transition: transform 2500ms var(--default-transition);
+  transition: border-color 250ms var(--default-transition);
 }
 /* .form-textarea:focus + .form-label,
 .form-input:focus + .form-label {
@@ -387,6 +406,8 @@ img {
   left: 12px;
 
   fill: currentColor;
+
+  transition: fill 250ms var(--default-transition);
 }
 .form-textarea {
   width: 100%;
@@ -399,7 +420,7 @@ img {
   outline: none;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  transition: transform 2500ms var(--default-transition);
+  transition: border-color 250ms var(--default-transition);
 }
 
 .form-textarea::-webkit-input-placeholder {
@@ -458,12 +479,11 @@ img {
 }
 
 .form-button {
-  display: block;
   margin-top: 30px;
+  /* display: block;
   margin-right: auto;
-  margin-left: auto;
-  min-width: 200px;
-  transition: transform 2500ms var(--default-transition);
+  margin-left: auto; */
+  width: 200px;
 }
 
 /* особливості */
@@ -783,25 +803,20 @@ img {
   border-radius: 4px;
 }
 
+.subscribe-input::-webkit-input-placeholder {
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
 .subscribe-button {
   position: relative;
-  display: flex;
-  align-items: center;
   width: 200px;
-  height: 50px;
   margin-left: 12px;
   padding-left: 28px;
-  /* padding: 13px, 28px; */
-
-  font-weight: 700;
-  font-size: 16px;
-  line-height: calc(30 / 16);
-
-  letter-spacing: 0.06em;
-  background: var(--button-bcg);
-  color: var(--button-text-color);
+  text-align: left;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
 }
 .subscribe-button::after {
   position: absolute;
@@ -813,10 +828,7 @@ img {
   margin-left: 10px;
   background-image: url('../images/send.svg');
 }
-.subscribe-button:hover,
-.subscribe-button:focus {
-  background-color: var(--button-hover);
-}
+
 /* Портфоліо */
 /* кнопки фільтру */
 .filter {
