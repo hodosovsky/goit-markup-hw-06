@@ -148,8 +148,7 @@ img {
   width: 100%;
   height: 4px;
   background: var(--hover-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 4px 0px 0px var(--hover-color),
-    -4px 0px 0px var(--hover-color);
+  box-shadow: 4px 0px 0px var(--hover-color), -4px 0px 0px var(--hover-color);
   border-radius: 2px;
 }
 
@@ -303,10 +302,10 @@ img {
   height: 100%;
 
   background-color: var(--main-bcg-color);
+
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-
   transform: translate(-50%, -50%) scale(1) rotateY(0);
   transition: opacity 2000ms var(--default-transition), transform 1000ms var(--default-transition);
 }
@@ -343,6 +342,7 @@ img {
   margin-right: auto;
   margin-left: auto;
   padding: 40px;
+  border-radius: 4px;
 }
 .form-title {
   margin: 0;
@@ -645,7 +645,6 @@ img {
   height: 44px;
   padding: 12px;
   border-radius: 50%;
-  fill: var(--icons-color);
   color: var(--icons-color);
   transition: color 250ms var(--default-transition),
     background-color 250ms var(--default-transition);
@@ -688,7 +687,8 @@ img {
 
   color: var(--icons-color);
 
-  transition: color 250ms var(--default-transition), border-color 250ms var(--default-transition);
+  transition: color 250ms var(--default-transition), border-color 250ms var(--default-transition),
+    border-color 250ms var(--default-transition), border-color 250ms var(--default-transition);
 }
 .clients-link:hover,
 .clients-link:focus {
