@@ -313,10 +313,11 @@ img {
 .close-modal {
   position: absolute;
   cursor: pointer;
-  top: 8px;
+  top: 9px;
   right: 8px;
   width: 30px;
   height: 30px;
+  padding: 6px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -404,7 +405,7 @@ img {
 
   top: 29px;
   left: 12px;
-
+  color: var(--title-color);
   fill: currentColor;
 
   transition: fill 250ms var(--default-transition);
@@ -416,7 +417,9 @@ img {
   margin-top: 4px;
   margin-bottom: 20px;
   resize: none;
-  font-size: 14px;
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  letter-spacing: 0.01em;
   outline: none;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
@@ -453,9 +456,11 @@ img {
   display: inline-block;
   width: 16px;
   height: 15px;
-  margin-right: 9px;
+  margin-right: 7px;
   border-radius: 2px;
   border: 2px solid var(--title-color);
+  transition: background-color 250ms var(--default-transition),
+    border-color 250ms var(--default-transition), background-image 250ms var(--default-transition);
 }
 
 .checkbox:checked + .policy-icon {
@@ -756,8 +761,9 @@ img {
   margin-bottom: 20px;
 }
 
-.footer-network {
+.footer-network-link {
   background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
 }
 
 /* Форма підписки */
